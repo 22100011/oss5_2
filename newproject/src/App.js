@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import ListPage from "./page/list";
+import DetailPage from "./page/detail";
+import UpdatePage from "./page/update";
 import './App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <h1>학생 관리 시스템</h1>
+        <Routes>
+          <Route path="/" element={<Navigate to="/list" />} />
+          <Route path="/list" element={<ListPage />} />
+          <Route path="/detail" element={<DetailPage />} />
+          <Route path="/update" element={<UpdatePage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
