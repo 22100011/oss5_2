@@ -82,13 +82,7 @@ const ReadStudent = () => {
 
   return (
     <div>
-      <h1>학생 관리 시스템</h1>
-      <p>수정된 횟수: {updateCount}</p> {/* 업데이트 횟수 표시 */}
-      <button
-        className="addBu"
-        onClick={() => handleOpenModal(null)} >
-        Add Student
-      </button>
+      <p style={{margin:"30px"}}>수정된 횟수: {updateCount}</p> {/* 업데이트 횟수 표시 */}
       <div id="studentList">
         {students.map((student) => (
           <div key={student.id} className="readSt">

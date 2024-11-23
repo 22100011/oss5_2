@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import ListPage from "./page/list";
 import DetailPage from "./page/detail";
 import UpdatePage from "./page/update";
+import AddPage from "./page/add";
 import './App.css';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/list" element={<ListPage />} />
           <Route path="/detail" element={<DetailPage />} />
           <Route path="/update" element={<UpdatePage />} />
+          <Route path="/add" element={<AddPage />} />
         </Routes>
       </div>
     </Router>
